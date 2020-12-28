@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./queries');
 
+const mssql = require('./mssql');
+
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(bodyParser.json());
 app.use(
@@ -15,6 +17,8 @@ app.use(
 app.get('/', (req, res) => {
     res.json({info : "Nice lur"})
 });
+
+app.get('/hakim', mssql.getHakim);
 
 app.get('/test', db.getTest);
 app.post('/create-test', db.createTest);
