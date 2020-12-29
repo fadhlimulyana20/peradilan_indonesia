@@ -24,4 +24,17 @@ router.get('/aduan/:id', Query.aduan.getDetaliAduan);
 router.get('/gugatan', Query.gugatan.getGugatan);
 router.get('/gugatan/:id', Query.gugatan.getDetailGugatan);
 
+// Terperkara
+router.get('/terperkara/:id', Query.terperkara.getDetailTerperkara);
+
+// Persidangan
+router.get('/persidangan', Query.persidangan.getPersidangan);
+router.get('/persidangan/:id', Query.persidangan.getDetailPersidangan);
+
+// Putusan 
+router.get('/putusan/:id', Query.putusan.getDetailPutusan);
+
+// Surat Dakwaan
+router.get('/surat_dakwaan/:id', Query.surat_dakwaan.getDetailSuratDakwaan);
+
 module.exports = router

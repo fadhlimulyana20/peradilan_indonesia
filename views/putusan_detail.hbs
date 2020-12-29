@@ -1,0 +1,78 @@
+<h2>Detil Putusan</h2>
+
+{{#each items.recordset}}
+<ul class="list-group">
+  <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">No Surat Putusan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoSuratPutusan}}</p>
+          </div>
+      </div>
+  </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Jenis</p>
+          </div>
+          <div class="col-9">
+              <p>Sidang {{this.Jenis}}</p>
+          </div>
+      </div>
+    </li>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tempat</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tempat}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tanggal</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tanggal}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Status</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.StatusPutusan}}</p>
+          </div>
+      </div>
+    </li>
+        <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Petitum</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Petitum}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">NoSidang</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoSidang}}</p>
+          </div>
+      </div>
+    </li>
+
+</ul>
+{{/each}}

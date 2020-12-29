@@ -1,0 +1,75 @@
+<h2>Detil Terperkara</h2>
+
+<ul class="list-group">
+{{#each items.recordset}}
+  <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nama Lengkap</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NamaLengkap}}</p>
+          </div>
+      </div>
+  </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Status Terperkara</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.StatusTerperkara}}</p>
+          </div>
+      </div>
+    </li>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nomor Surat Perkara</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoPerkara}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nomor Surat Putusan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoPutusan}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Alamat</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NamaJalan}}</p>
+              <p>{{this.Dusun}} RT {{this.RT}}, RW {{this.RW}}, {{this.Desa_Kelurahan}}, </p>
+              <p>{{this.Kota_Kabupaten}}, {{this.Provinsi}}</p>
+          </div>
+      </div>
+    </li>
+{{/each}}
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nomor Surat Dakwaan</p>
+          </div>
+          <div class="col-9">
+              <ul>
+                {{#each surat_dakwaan.recordset}}
+                  <li>
+                    <a class="btn btn-link" href="/surat_dakwaan/{{this.NoSuratDakwaan}}">{{this.NoSuratDakwaan}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+          </div>
+      </div>
+    </li>
+</ul>

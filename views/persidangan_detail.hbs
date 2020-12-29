@@ -1,24 +1,24 @@
-<h3>Detail Gugatan</h3>
+<h2>Detil Persidangan</h2>
 
-<ul class="list-group">
 {{#each items.recordset}}
+<ul class="list-group">
   <li class="list-group-item">
       <div class="row">
           <div class="col-3">
-              <p class="fw-bold">NoAduan</p>
+              <p class="fw-bold">No Sidang</p>
           </div>
           <div class="col-9">
-              <p>{{this.NoSurat}}</p>
+              <p>{{this.NoSidang}}</p>
           </div>
       </div>
   </li>
     <li class="list-group-item">
       <div class="row">
           <div class="col-3">
-              <p class="fw-bold">Tanggal Gugatan</p>
+              <p class="fw-bold">Jenis</p>
           </div>
           <div class="col-9">
-              <p>{{this.Tgl}}</p>
+              <p>Sidang {{this.Jenis}}</p>
           </div>
       </div>
     </li>
@@ -26,65 +26,55 @@
     <li class="list-group-item">
       <div class="row">
           <div class="col-3">
-              <p class="fw-bold">Lokasi Kejadian</p>
+              <p class="fw-bold">Tempat</p>
           </div>
           <div class="col-9">
-              <p>{{this.LokasiKejadian}}</p>
+              <p>{{this.NamaPengadilan}}</p>
           </div>
       </div>
     </li>
     <li class="list-group-item">
       <div class="row">
           <div class="col-3">
-              <p class="fw-bold">Status</p>
+              <p class="fw-bold">Nomor Ruang</p>
           </div>
           <div class="col-9">
-              <p>{{this.StatusGugatan}}</p>
+              <p>{{this.NoRuang}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tanggal</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tanggal}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Agenda</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Agenda}}</p>
           </div>
       </div>
     </li>
         <li class="list-group-item">
       <div class="row">
           <div class="col-3">
-              <p class="fw-bold">Nama Pelapor</p>
+              <p class="fw-bold">Pimpinan Sidang</p>
           </div>
           <div class="col-9">
-              <p>{{this.Pelapor}}</p>
-          </div>
-      </div>
-    </li>
-{{/each}}
-    <li class="list-group-item">
-      <div class="row">
-          <div class="col-3">
-              <p class="fw-bold">Tuntutan</p>
-          </div>
-          <div class="col-9">
-              {{#each tuntutan.recordset}}
-              <ul>
-                <li><p>{{this.IsiTuntutan}}</p></li>
-              </ul>
-              {{/each}}
-          </div>
-      </div>
-    </li>
-        <li class="list-group-item">
-      <div class="row">
-          <div class="col-3">
-              <p class="fw-bold">Terperkara</p>
-          </div>
-          <div class="col-9">
-              {{#each terperkara.recordset}}
-              <ul>
-                <li><a class="btn btn-link" href="/terperkara/{{this.IdTerperkara}}">{{this.Terperkara}}</a></li>
-              </ul>
-              {{/each}}
+              <p>{{this.PimpinanSidang}}</p>
           </div>
       </div>
     </li>
 </ul>
-
-{{!-- <div class="container-fluid mt-3">
-    <a class="btn btn-primary px-3" role="button" href="">Lihat Surat Dakwaan</a>
-</div> --}}
-
+<div class="mt-4">
+    <a href="/putusan/{{this.NoSidang}}" class="btn btn-primary">Lihat Putusan</a>
+</div>
+{{/each}}

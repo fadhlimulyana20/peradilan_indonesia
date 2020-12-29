@@ -1,0 +1,34 @@
+<h2>Daftar Persidangan</h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">No Sidang</th>
+      <th scope="col">Jenis</th>
+      <th scope="col">Tempat</th>
+      <th scope="col">No Ruang</th>
+      <th scope="col">Tanggal</th>
+      <th scope="col">Agenda</th>
+      <th scope="col">Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items.recordset}}
+        <tr>
+            <th scope="row"> {{@index}} </th>
+            <td>{{this.NoSidang}}</td>
+            <td>{{this.Jenis}}</td>
+            <td>{{this.NamaPengadilan}}</td>
+            <td>{{this.NoRuang}}</td>
+            <td>{{this.Tanggal}}</td>
+            <td>{{this.Agenda}}</td>
+            <td>
+                <a class="btn btn-sm btn-outline-primary" role="button" href="/persidangan/{{this.NoSidang}}">
+                    Lihat
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

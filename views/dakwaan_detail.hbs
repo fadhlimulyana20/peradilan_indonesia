@@ -1,0 +1,57 @@
+<h2>Detil Surat Dakwaan</h2>
+
+{{#each items.recordset}}
+<ul class="list-group">
+  <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">No Surat Dakwaan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoSuratDakwaan}}</p>
+          </div>
+      </div>
+  </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Dakwaan</p>
+          </div>
+          <div class="col-9">
+              <p>Sidang {{this.Dakwaan}}</p>
+          </div>
+      </div>
+    </li>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tempat</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tempat}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tanggal</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tanggal}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Pengadilan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NamaPengadilan}}</p>
+          </div>
+      </div>
+    </li>
+</ul>
+{{/each}}
