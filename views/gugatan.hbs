@@ -1,0 +1,31 @@
+<h3>Daftar Gugatan</h3>
+<table class="table table-hover">
+ <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NoSurat</th>
+      <th scope="col">Tanggal</th>
+      <th scope="col">Lokasi Kejadian</th>
+      <th scope="col">Pelapor</th>
+      <th scope="col">Status</th>
+      <th scope="col">Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items.recordset}}
+        <tr>
+            <th scope="row"> {{@index}} </th>
+            <td>{{this.NoSurat}}</td>
+            <td>{{this.Tgl}}</td>
+            <td>{{this.LokasiKejadian}}</td>
+            <td>{{this.Pelapor}}</td>
+            <td>{{this.StatusGugatan}}</td>
+            <td>
+                <a class="btn btn-sm btn-outline-primary" role="button" href="/gugatan/{{this.NoSurat}}">
+                    Lihat
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

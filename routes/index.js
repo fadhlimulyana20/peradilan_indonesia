@@ -20,4 +20,8 @@ router.get('/hakim', Query.hakim.getHakim);
 router.get('/aduan', Query.aduan.getAduan);
 router.get('/aduan/:id', Query.aduan.getDetaliAduan);
 
+// Gugatan
+router.get('/gugatan', Query.gugatan.getGugatan);
+router.get('/gugatan/:id', Query.gugatan.getDetailGugatan);
+
 module.exports = router

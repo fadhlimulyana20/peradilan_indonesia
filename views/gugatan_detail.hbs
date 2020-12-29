@@ -1,0 +1,86 @@
+<h3>Detail Gugatan</h3>
+
+<ul class="list-group">
+{{#each items.recordset}}
+  <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">NoAduan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoSurat}}</p>
+          </div>
+      </div>
+  </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tanggal Gugatan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Tgl}}</p>
+          </div>
+      </div>
+    </li>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Lokasi Kejadian</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.LokasiKejadian}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Status</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.StatusGugatan}}</p>
+          </div>
+      </div>
+    </li>
+        <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nama Pelapor</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Pelapor}}</p>
+          </div>
+      </div>
+    </li>
+{{/each}}
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tuntutan</p>
+          </div>
+          <div class="col-9">
+              {{#each tuntutan.recordset}}
+              <ul>
+                <li><p>{{this.IsiTuntutan}}</p></li>
+              </ul>
+              {{/each}}
+          </div>
+      </div>
+    </li>
+        <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Terperkara</p>
+          </div>
+          <div class="col-9">
+              {{#each terperkara.recordset}}
+              <ul>
+                <li><p>{{this.Terperkara}}</p></li>
+              </ul>
+              {{/each}}
+          </div>
+      </div>
+    </li>
+</ul>
+
