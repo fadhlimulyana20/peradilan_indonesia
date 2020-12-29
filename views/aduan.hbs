@@ -1,0 +1,29 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">No Aduan</th>
+      <th scope="col">Perihal</th>
+      <th scope="col">Lokasi Kejadian</th>
+      <th scope="col">Status Aduan</th>
+      <th scope="col">Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items.recordset}}
+        <tr>
+            <th scope="row"> {{@index}} </th>
+            <td>{{this.NoAduan}}</td>
+            <td>{{this.Perihal}}</td>
+            <td>{{this.LokasiKejadian}}</td>
+            <td>{{this.StatusAduan}}</td>
+            <td>
+                <a class="btn btn-sm btn-outline-primary" role="button" href="/aduan/{{this.NoAduan}}">
+                    Lihat
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

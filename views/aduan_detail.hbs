@@ -1,0 +1,87 @@
+<h2>Detil Aduan</h2>
+
+{{#each items.recordset}}
+<ul class="list-group">
+  <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">NoAduan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NoAduan}}</p>
+          </div>
+      </div>
+  </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Tanggal Aduan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.TglAduan}}</p>
+          </div>
+      </div>
+    </li>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Lokasi Kejadian</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.LokasiKejadian}}</p>
+          </div>
+      </div>
+    </li>
+        <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nama Terlapor</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.NamaTerlapor}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Keterangan</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Keterangan}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Status</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.StatusAduan}}</p>
+          </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Lembaga Kepolisian Terkait</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Kepolisian}}</p>
+          </div>
+      </div>
+    </li>
+        <li class="list-group-item">
+      <div class="row">
+          <div class="col-3">
+              <p class="fw-bold">Nama Pelapor</p>
+          </div>
+          <div class="col-9">
+              <p>{{this.Pelapor}}</p>
+          </div>
+      </div>
+    </li>
+</ul>
+{{/each}}

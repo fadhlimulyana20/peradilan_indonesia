@@ -16,4 +16,8 @@ router.get('/', function (req, res) {
 //Hakim 
 router.get('/hakim', Query.hakim.getHakim);
 
+// Aduan
+router.get('/aduan', Query.aduan.getAduan);
+router.get('/aduan/:id', Query.aduan.getDetaliAduan);
+
 module.exports = router
