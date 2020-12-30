@@ -39,7 +39,33 @@ const getDetailPersidangan = (req, res) =>{
     }).catch(err => {
         console.log(err);
     })
-} 
+}
+
+const insertPersidangan = (req, res) => {
+    const { no_ruang, jenis, tanggal, jam, agenda } = req.body;
+
+    pool.connect().then(() => {
+        const transaction = new sql.Transaction(pool);
+        transaction.begin().then(() => {
+            const request = new sql.Request(transaction);
+            request.query(
+                `INSERT INTO PERSIDANGAN (NoRuang, Tanggal, Jenis, Jam, Agenda)
+                 VALUES ($1, $2, $3, $4, $5)`, [no_ruang, tanggal, jenis, jam, agenda]
+            ).then(() => {
+                transaction.commit().then(resp => {
+                    console.log(resp);
+                    pool.close();
+                }).catch(err => {
+                    console.log("Error in transaction commit " + err);
+                    pool.close();
+                })
+            }).catch(err => {
+                console.log("Error in Transaction Begin " + err);
+                pool.close();
+            })
+        })
+    })
+}
 
 module.exports = {
     getPersidangan,

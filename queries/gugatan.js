@@ -39,7 +39,7 @@ const getDetailGugatan = (req, res) =>{
                     ...data,
                     tuntutan : result
                 }
-                request.query("SELECT T.NamaLengkap AS Terperkara, T.IdTerperkara  FROM GUGATAN_TERPERKARA AS GT INNER JOIN GUGATAN_PERDATA AS GP ON GP.NoSurat = GT.NoSuratGugatan INNER JOIN TERPERKARA AS T ON T.IdTerperkara = GT.IdTerperkara WHERE GP.NoSurat = $1", [id]).then(result => {
+                request.query("SELECT T.NamaLengkap , T.IdTerperkara  FROM GUGATAN_TERPERKARA AS GT INNER JOIN GUGATAN_PERDATA AS GP ON GP.NoSurat = GT.NoSuratGugatan INNER JOIN TERPERKARA AS T ON T.IdTerperkara = GT.IdTerperkara WHERE GP.NoSurat = $1", [id]).then(result => {
                     data = {
                         ...data,
                         terperkara : result
