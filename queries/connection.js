@@ -4,7 +4,7 @@ const pool = new sql.ConnectionPool({
     user: 'peradilan_indo',
     password: 'password123',
     server: 'localhost',
-    database: 'PeradilanIndonesia'
+    database: 'PeradilanIndonesiaNew'
 });
 
 pool.connect(err => {

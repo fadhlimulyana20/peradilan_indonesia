@@ -1,4 +1,5 @@
 # Sistem Informasi Transparansi Peradilan di Indonesia
+Repository ini berisikan sumber kode sistem informasi transparansi peradilan di Indonesia. Sistem ini dibuat untuk memenuhi tugas mata kuliah Basis Data tentang miniworld Peradilan di Indonesia.
 
 ## Tutorial Install
 1. Install Node JS terlebih dahulu https://nodejs.org/en/download/
